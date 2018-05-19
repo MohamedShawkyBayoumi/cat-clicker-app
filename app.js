@@ -18,12 +18,12 @@ class Cat {
 
 		let cat = document.querySelector('.cat-photo');
 		let catCounter = document.querySelector('.cat-counter');
-		catCounter.innerHTML = `Counter is ${this.counter}`;
+		catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
 
 		cat.addEventListener('click', function(){
 
 		this.counter++;
-		catCounter.innerHTML = `Counter is ${this.counter}`;
+		catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
 		});
 
 	}
