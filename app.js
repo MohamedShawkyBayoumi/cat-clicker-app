@@ -3,7 +3,7 @@ class Cat {
 	constructor(catname){
 		this.catname= catname;
 		this.counter = 0;
-		this.img = `<img class="cat-photo" src="cat.jpg">`;
+		this.img = `<img class="cat-photo" src="${this.catname}.jpg">`;
 		this.draw();
 		
 	}
@@ -19,7 +19,7 @@ class Cat {
 		let cats = document.querySelectorAll('.cat');
 		let catCounter = document.querySelector('.cat-counter');
 		catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
-		console.log(cats);
+		
 
 
 		cats.forEach(cat => {
@@ -29,14 +29,6 @@ class Cat {
 			});
 		});
 
-
-/*
-		div1.addEventListener("click",function(evt){
-			 if (evt.target.nodeName == "IMG" ) {
-			    // your code here
-			}
-		})
-*/
 	}
 
 
