@@ -10,23 +10,37 @@ class Cat {
 
 	draw(){
 		let catDivInit = document.querySelector('.cat-div-init');
-		catDivInit.innerHTML += `<h3>${this.catname}</h3> ${this.img}`;
+		catDivInit.innerHTML += `<div class="cat ${this.catname}"><h3>${this.catname}</h3> ${this.img}</div>`;
 		this.click();
 	}
 
 	click(){
 
-		let cat = document.querySelector('.cat-photo');
+		let cats = document.querySelectorAll('.cat');
 		let catCounter = document.querySelector('.cat-counter');
 		catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
+		console.log(cats);
 
-		cat.addEventListener('click', function(){
 
-		this.counter++;
-		catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
+		cats.forEach(cat => {
+			cat.addEventListener('click', () => {
+			this.counter++;
+			catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
+			});
 		});
 
+
+/*
+		div1.addEventListener("click",function(evt){
+			 if (evt.target.nodeName == "IMG" ) {
+			    // your code here
+			}
+		})
+*/
 	}
+
+
+
 }
 
 new Cat('Ketty');
