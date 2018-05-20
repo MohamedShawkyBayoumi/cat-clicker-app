@@ -19,7 +19,7 @@ class Cat {
 		let cats = document.querySelectorAll('.cat');
 		let catCounter = document.querySelector('.cat-counter');
 		let display = document.querySelector('.display');
-		catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
+		catCounter.innerHTML = `<h2>Click on photos</h2>`;
 		
 
 
@@ -27,7 +27,7 @@ class Cat {
 			cat.addEventListener('click', () => {
 			this.counter++;
 			catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
-			display.innerHTML = `<div class="cat ${this.catname}"><h3>${this.catname}</h3> ${this.img}</div>`;
+			display.innerHTML = cat.innerHTML;
 			console.log(cat);
 			});
 		});
