@@ -16,30 +16,49 @@ class Cat {
 
 	click(){
 
-		let cats = document.querySelectorAll('.cat');
-		let catCounter = document.querySelector('.cat-counter');
-		let display = document.querySelector('.display');
-		catCounter.innerHTML = `<h2>Click on photos</h2>`;
 		
 
-
+/*
 		cats.forEach(cat => {
-			cat.addEventListener('click', () => {
-			this.counter++;
-			catCounter.innerHTML = `<h2>Counter is ${this.counter}</h2>`;
-			display.innerHTML = cat.innerHTML;
-			console.log(cat);
-			});
 		});
-
+*/
 	}
 
 
 
 }
 
-new Cat('Ketty');
-new Cat('Bosy');
-new Cat('Liza-Rene');
-new Cat('Nini');
-new Cat('Losy');
+//new Cat('Ketty');
+//new Cat('Bosy');
+//new Cat('Liza-Rene');
+//new Cat('Nini');
+//new Cat('Losy');
+
+const allCats = [
+	new Cat('Ketty'),
+	new Cat('Bosy'),
+	new Cat('Liza-Rene'),
+	new Cat('Nini'),
+	new Cat('Losy')
+];
+
+
+
+
+for(let cat of allCats){
+
+	let cats = document.querySelectorAll('.cat');
+	let catCounter = document.querySelector('.cat-counter');
+	let display = document.querySelector('.display');
+	catCounter.innerHTML = `<h2>Click on photos</h2>`;
+
+	
+	cat.addEventListener('click', () => {
+		cat.counter++;
+		catCounter.innerHTML = `<h2>Counter is ${cat.counter}</h2>`;
+		display.innerHTML = cat.innerHTML;
+	
+	});
+
+
+}
