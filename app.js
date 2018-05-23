@@ -72,7 +72,7 @@ for(let cat of allCats){
 
 				catDisplay.addEventListener('click', () => {
 					cat.counter++;
-					catCounter.innerHTML = `<h2>Counter is ${cat.counter}<h2>`;
+					catCounter.innerHTML = `<h2>Counter is ${cat.counter}</h2>`;
 				});
 			};
 		});
